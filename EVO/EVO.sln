@@ -3,14 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34407.89
 MinimumVisualStudioVersion = 10.0.40219.1
+
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "EVO.UserInterface", "EVO.UserInterface\EVO.UserInterface.esproj", "{EF58F0C5-B80B-4D9D-A2E7-6F53A3BF9EE5}"
 EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.Common", "EVO.Common\EVO.Common.csproj", "{37C23A48-42FE-433E-BE55-5B897A8ACD98}"
 EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.Repository", "EVO.Repository\EVO.Repository.csproj", "{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}"
 EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.ApiService", "EVO.ApiService\EVO.ApiService.csproj", "{0276999A-F8D0-43DF-A829-822906DDFE90}"
 EndProject
+
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Scripts", "_Scripts", "{01D88E9C-D281-4A8B-B017-50B4B297DBA7}"
+	ProjectSection(SolutionItems) = preProject
+		_Scripts\SP_001_NT_20231123_UserAcessLeve.sql = _Scripts\SP_001_NT_20231123_UserAcessLeve.sql
+		_Scripts\SP_002_NT_20231123_User.sql = _Scripts\SP_002_NT_20231123_User.sql
+		_Scripts\SP_003_NT_20231123_Customer.sql = _Scripts\SP_003_NT_20231123_Customer.sql
+		_Scripts\SP_004_NT_20231123_InvoiceServices.sql = _Scripts\SP_004_NT_20231123_InvoiceServices.sql
+		_Scripts\SP_005_NT_20231123_ServiceByInvoice.sql = _Scripts\SP_005_NT_20231123_ServiceByInvoice.sql
+	EndProjectSection
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,10 +51,13 @@ Global
 		{0276999A-F8D0-43DF-A829-822906DDFE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0276999A-F8D0-43DF-A829-822906DDFE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5478702B-D5AF-4F30-8E4D-AAC4EDE1796E}
 	EndGlobalSection
+
 EndGlobal
