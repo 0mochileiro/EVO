@@ -1,9 +1,24 @@
-﻿using EVO.Repository.Repositories;
+﻿using EVO.Repository.Data;
+using EVO.Repository.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace EVO.Repository;
 
 public class Entities : IDisposable
 {
+    public Entities(DbContextOptions<Context> dbContextOptions)
+    {
+        _CustomerRepository = new Lazy<CustomerRepository>(() => new CustomerRepository(dbContextOptions));
+
+        _InvoiceServiceRepository = new Lazy<InvoiceServiceRepository>(() => new InvoiceServiceRepository(dbContextOptions));
+
+        _ServiceByInvoiceRepository = new Lazy<ServiceByInvoiceRepository>(() => new ServiceByInvoiceRepository(dbContextOptions));
+
+        _UserAccessLevelDomainRepository = new Lazy<UserAccessLevelDomainRepository>(() => new UserAccessLevelDomainRepository(dbContextOptions));
+
+        _UserRepository = new Lazy<UserRepository>(() => new UserRepository(dbContextOptions));
+    }
+
     private Lazy<CustomerRepository> _CustomerRepository { get; set; }
     public CustomerRepository CustomerRepository => _CustomerRepository.Value;
 

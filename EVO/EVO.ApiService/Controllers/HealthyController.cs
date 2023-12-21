@@ -1,12 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using EVO.Repository.Data;
+using EVO.ApiService.Controllers.Abstractions;
 
 namespace EVO.ApiService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class HealthyController : ControllerBase
+    public class HealthyController : AbstractController
     {
-        public HealthyController()
+        public HealthyController(DbContextOptions<Context> dbContextOptions) : base(dbContextOptions)
         {
         }
 
@@ -17,9 +20,9 @@ namespace EVO.ApiService.Controllers
             {
                 Running = true,
                 Route = "api/Healthy",
-                DateTime = DateTime.UtcNow.ToString("dd/MM/yy")
+                DateTime = DateTime.UtcNow
             });
         }
     }
 }
-    
+

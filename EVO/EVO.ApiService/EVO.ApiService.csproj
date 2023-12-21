@@ -1,10 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EVO.Common\EVO.Common.csproj" />
+    <ProjectReference Include="..\EVO.Repository\EVO.Repository.csproj" />
+  </ItemGroup>
 
 </Project>
