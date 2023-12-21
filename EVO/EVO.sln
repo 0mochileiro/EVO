@@ -16,6 +16,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.ApiService", "EVO.ApiService\EVO.ApiService.csproj", "{0276999A-F8D0-43DF-A829-822906DDFE90}"
 EndProject
 
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Schema", "_Schema", "{D59D0797-5C3D-48E4-B487-C276A2165C06}"
+	ProjectSection(SolutionItems) = preProject
+		_Scripts\_Schema\SP_000_NT_20231123_ApplicationVersion.sql = _Scripts\_Schema\SP_000_NT_20231123_ApplicationVersion.sql
+	EndProjectSection
+EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Scripts", "_Scripts", "{01D88E9C-D281-4A8B-B017-50B4B297DBA7}"
 	ProjectSection(SolutionItems) = preProject
 		_Scripts\SP_001_NT_20231123_UserAcessLeve.sql = _Scripts\SP_001_NT_20231123_UserAcessLeve.sql
@@ -54,6 +60,10 @@ Global
 	
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+	GlobalSection(NestedProjects) = preSolution
+		{D59D0797-5C3D-48E4-B487-C276A2165C06} = {01D88E9C-D281-4A8B-B017-50B4B297DBA7}
 	EndGlobalSection
 	
 	GlobalSection(ExtensibilityGlobals) = postSolution
