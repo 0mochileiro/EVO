@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+EVO/EVO.ApiService/Properties/launchSettings.json
