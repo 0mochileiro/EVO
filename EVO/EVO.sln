@@ -7,6 +7,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "EVO.UserInterface", "EVO.Us
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.Common", "EVO.Common\EVO.Common.csproj", "{37C23A48-42FE-433E-BE55-5B897A8ACD98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVO.Repository", "EVO.Repository\EVO.Repository.csproj", "{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{37C23A48-42FE-433E-BE55-5B897A8ACD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C23A48-42FE-433E-BE55-5B897A8ACD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C23A48-42FE-433E-BE55-5B897A8ACD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D206DE-2ACB-4A7E-AD91-56B37CC6269A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

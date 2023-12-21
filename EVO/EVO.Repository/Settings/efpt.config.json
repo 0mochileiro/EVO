@@ -1,0 +1,56 @@
+{
+  "CodeGenerationMode": 2,
+  "ContextClassName": "Context",
+  "ContextNamespace": "EVO.Repository.Data",
+  "DefaultDacpacSchema": null,
+  "FilterSchemas": false,
+  "IncludeConnectionString": false,
+  "ModelNamespace": null,
+  "OutputContextPath": "Data",
+  "OutputPath": "Models",
+  "PreserveCasingWithRegex": true,
+  "ProjectRootNamespace": "EVO.Repository",
+  "Schemas": null,
+  "SelectedHandlebarsLanguage": 0,
+  "SelectedToBeGenerated": 0,
+  "Tables": [
+    {
+      "Name": "[dbo].[Customer]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[dbo].[InvoiceServices]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[dbo].[ServiceByInvoice]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[dbo].[User]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[dbo].[UserAccessLevelDomain]",
+      "ObjectType": 0
+    }
+  ],
+  "UiHint": "(localdb)\\MSSQLLocalDB.SEVO",
+  "UncountableWords": null,
+  "UseBoolPropertiesWithoutDefaultSql": false,
+  "UseDatabaseNames": false,
+  "UseDbContextSplitting": false,
+  "UseFluentApiOnly": true,
+  "UseHandleBars": false,
+  "UseHierarchyId": false,
+  "UseInflector": false,
+  "UseLegacyPluralizer": false,
+  "UseManyToManyEntity": false,
+  "UseNoDefaultConstructor": false,
+  "UseNoObjectFilter": false,
+  "UseNodaTime": false,
+  "UseNullableReferences": false,
+  "UseSchemaFolders": false,
+  "UseSpatial": false,
+  "UseT4": false
+}
