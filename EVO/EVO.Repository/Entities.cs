@@ -1,4 +1,5 @@
 ﻿using EVO.Repository.Data;
+using EVO.Repository.Models;
 using EVO.Repository.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,8 @@ public class Entities : IDisposable
 {
     public Entities(DbContextOptions<Context> dbContextOptions)
     {
+        _ApplicationVersion = new Lazy<ApplicationVersionRepository>(() =>  new ApplicationVersionRepository(dbContextOptions));
+
         _CustomerRepository = new Lazy<CustomerRepository>(() => new CustomerRepository(dbContextOptions));
 
         _InvoiceServiceRepository = new Lazy<InvoiceServiceRepository>(() => new InvoiceServiceRepository(dbContextOptions));
@@ -18,6 +21,9 @@ public class Entities : IDisposable
 
         _UserRepository = new Lazy<UserRepository>(() => new UserRepository(dbContextOptions));
     }
+
+    private Lazy<ApplicationVersionRepository> _ApplicationVersion { get; set; }
+    public ApplicationVersionRepository ApplicationVersionRepository => _ApplicationVersion.Value;
 
     private Lazy<CustomerRepository> _CustomerRepository { get; set; }
     public CustomerRepository CustomerRepository => _CustomerRepository.Value;
@@ -36,6 +42,9 @@ public class Entities : IDisposable
 
     public void Dispose()
     {
+        if (_ApplicationVersion.IsValueCreated)
+            _ApplicationVersion.Value.Dispose();
+
         if (_CustomerRepository.IsValueCreated)
             _UserRepository.Value.Dispose();
 

@@ -31,7 +31,7 @@ public abstract class AbstractRepository<T> : IDisposable, ICrud<T> where T : cl
         return entities;
     }
 
-    public virtual T? Find(Expression<Func<T, bool>> func)
+    public virtual T Find(Expression<Func<T, bool>> func)
     {
         return context.Set<T>().FirstOrDefault(func);
     }

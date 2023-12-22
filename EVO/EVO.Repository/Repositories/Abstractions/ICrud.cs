@@ -16,7 +16,7 @@ public interface ICrud<T> where T : class
 
     bool Delete(IEnumerable<T> entities);
 
-    T? Find(Expression<Func<T, bool>> func);
+    T Find(Expression<Func<T, bool>> func);
 
     IEnumerable<T> FindAll(Expression<Func<T, bool>> func);
 
