@@ -13,6 +13,12 @@ public class ApplicationVersionRepository : AbstractRepository<ApplicationVersio
     {
     }
 
+    public string GetVersion()
+    {
+        return context.ApplicationVersion?
+            .First()?.Version;
+    }
+
     public ApplicationVersion GetApplicationVersionWithComponent()
     {
         return context.ApplicationVersion?

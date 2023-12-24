@@ -13,14 +13,32 @@ namespace EVO.ApiService.Controllers
         {
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("GetHealthy")]
+        public IActionResult GetHealthy()
         {
+            var version = _Entities.ApplicationVersionRepository
+                .GetVersion();
+
             return Ok(new
             {
-                Running = true,
-                Route = "api/Healthy",
-                DateTime = DateTime.UtcNow
+                Working = true,
+                ExecutionDataTime = DateTime.UtcNow,
+                ApplicationVersion  = version
+            });
+        }
+
+        [HttpGet("GetApplicationVersion")]
+        public IActionResult GetApplicationVersion()
+        {
+            var applicationVersion = _Entities.ApplicationVersionRepository
+                .GetApplicationVersionWithComponent();
+
+            return Ok(new
+            {
+                Version = applicationVersion,
+                Label = applicationVersion.ApplicationVersionLabel,
+                Components = applicationVersion.ApplicationVersionComponent,
+                Scripts = applicationVersion.ApplicationVersionScript
             });
         }
     }
